@@ -36,6 +36,7 @@
 
         .form-container {
             display: grid;
+            justify-items: center;
             grid-template-rows: auto 1fr auto;
             width: 300px;
         }
@@ -60,26 +61,18 @@
             margin-top: 0;
             margin-bottom: 32px;
         }
-        .form {
+        .email-icon {
             display: flex;
-            flex-direction: column;
-        }
-        .label {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-
-        .input {
-            height: 30px;
-            padding: 6px;
-            margin-bottom: 20px;
-            font-family: "Quicksand", sans-serif;
-            font-size: var(--md);
+            justify-content: center;
+            align-items: center;
+            width: 132px;
+            height: 132px;
+            margin-bottom: 30px;
+            border-radius: 50%;
             background-color: var(--text-input--field);
-            border: none;
-            border-radius: 8px;
-            font-size: var(--md);
+        }
+        .email-icon img {
+            width: 80px;
         }
         .primary-button {
             width: 100%;
@@ -93,9 +86,15 @@
             color: var(--white);
             cursor: pointer;
         }
-        .login-button {
-            margin-top: 14px;
-            margin-bottom: 30px;
+        .resend-footer {
+            font-size: var(--sm);
+        }
+        .resend-footer span {
+            color: var(--black);
+        }
+        .resend-footer a {
+            color: var(--hospital-green);
+            text-decoration: none;
         }
 
         @media (max-width: 640px) {
@@ -110,18 +109,19 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
 
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
 
-            <form action="/" class="form">
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" class="input input-password" placeholder="*********">
+            <div class="email-icon">
+                <img src="./icons/email.svg" alt="email-icon">
+            </div>
 
-                <label for="new-password" class="label">Password</label>
-                <input type="password" id="new-password" class="input input-password" placeholder="*********">
+            <button class="primary-button login-button">Login</button>
 
-                <input type="submit" value="Confirm" class="primary-button login-button">
-            </form>
+            <p class="resend-footer">
+                <span>Didn't receive the email?</span>
+                <a href="/">Resend</a>
+            </p>
         </div>
     </div>
 </body>
