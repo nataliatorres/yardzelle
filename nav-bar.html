@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input--field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu {
+            display: none;
+        }
+        .logo {
+            width: 100px;
+        }
+        .left-section {
+            display: flex;
+            align-items: center;
+        }
+        .left-section ul,
+        .right-section {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            height: 60px;
+
+        }
+        .right-section p {
+            margin: 0;
+        }
+        .left-section ul a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 5px 10px;
+        }
+        .left-section ul a:hover {
+            border: 1px solid var(--hospital-green);
+            border-radius: 10px;
+            color: var(--hospital-green);
+            font-weight: bold;
+        }
+        .right-section-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+        .right-section-down-arrow {
+            margin-left: 8px;
+            transform: rotate(90deg);
+        }
+        .right-section-shopping-cart {
+            margin-left: 12px;
+        }
+
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+            }
+            .left-section ul {
+                display: none;
+            }
+            .right-section-down-arrow,
+            .right-section-email {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <img class="menu" src="./assets/icons/icon_menu.svg" alt="menu-icon">
+        <div class="left-section">
+            <img class="logo" src="./assets/logos/logo_yard_sale.svg" alt="yardsale-logo">
+            <ul class="menu-options">
+                <li>
+                    <a href="">All</a>
+                </li>
+                <li>
+                    <a href="">Clothes</a>
+                </li>
+                <li>
+                    <a href="">Electronics</a>
+                </li>
+                <li>
+                    <a href="">Furniture</a>
+                </li>
+                <li>
+                    <a href="">Toys</a>
+                </li>
+                <li>
+                    <a href="">Others</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-section">
+            <p class="right-section-email">test@yardzelle.com</p>
+            <img class="right-section-down-arrow" src="./assets/icons/flechita.svg" alt="down-arrow">
+            <img class="right-section-shopping-cart" src="./assets/icons/icon_shopping_cart_notification.svg" alt="">
+        </div>
+    </nav>
+</body>
+</html>
