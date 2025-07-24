@@ -92,10 +92,16 @@
                 width: 100%;
             }
             .product-summary {
-            font-size: var(--md);
-            margin: 0 0 70px 0;
-            color: var(--very-light-pink);
-        }
+                font-size: var(--md);
+                margin: 0 0 70px 0;
+                color: var(--very-light-pink);
+            }
+            .add-to-cart-button {
+                position: absolute;
+                bottom: 50px;
+                width: 90%;
+                left: 20px;
+            }
         }
     </style>
 </head>
@@ -107,9 +113,11 @@
         <img src="https://images.pexels.com/photos/263168/pexels-photo-263168.jpeg" alt="">
 
         <section class="product-info">
-            <p class="product-price">$10,00</p>
-            <p class="product-name">Lint Free Cloth</p>
-            <p class="product-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus tempora, asperiores pariatur inventore laboriosam totam facere tempore expedita laudantium corrupti accusantium quam adipisci voluptatem eius vitae minus excepturi libero?</p>
+            <div>
+                <p class="product-price">$10,00</p>
+                <p class="product-name">Lint Free Cloth</p>
+                <p class="product-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus tempora, asperiores pariatur inventore laboriosam totam facere tempore expedita laudantium corrupti accusantium quam adipisci voluptatem eius vitae minus excepturi libero?</p>
+            </div>
             <button class="primary-button add-to-cart-button">
                 <img src="./assets/icons/bt_add_to_cart.svg" alt="add to cart icon">
             Add to cart</button>
